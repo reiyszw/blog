@@ -5,8 +5,13 @@
 @import "components/header.scss";
 @import "components/nav.scss";
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: $font;
+  font-size: 1.6em;
   line-height: 1.6;
   color: $color-primary-500;
 }
@@ -22,6 +27,19 @@ li {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
 ul {
   list-style-type: none;
 }
@@ -29,4 +47,5 @@ ul {
 a {
   color: $color-primary-500;
   box-shadow: none;
+  text-decoration: none;
 }
