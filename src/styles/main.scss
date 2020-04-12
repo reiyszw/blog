@@ -1,5 +1,6 @@
 @import "base/normalize.css";
 @import "base/variables.scss";
+@import "base/colors.scss";
 @import "components/layout.scss";
 @import "components/header.scss";
 @import "components/nav.scss";
@@ -7,6 +8,7 @@
 body {
   font-family: $font;
   line-height: 1.6;
+  color: $color-primary-500;
 }
 
 h1,
@@ -25,5 +27,6 @@ ul {
 }
 
 a {
+  color: $color-primary-500;
   box-shadow: none;
 }
