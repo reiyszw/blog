@@ -4,6 +4,11 @@
 @import "components/header.scss";
 @import "components/nav.scss";
 
+body {
+  font-family: $font;
+  line-height: 1.6;
+}
+
 h1,
 h2,
 h3,
@@ -20,6 +25,5 @@ ul {
 }
 
 a {
-  color: initial;
   box-shadow: none;
 }
