@@ -1,6 +1,42 @@
+@import "./../base/colors.scss";
+
 .nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   align-items: center;
   grid-column-gap: 30px;
+
+  &__link {
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      background: $color-primary-500;
+      transition: 0.17s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__active {
+    &::after {
+      content: "";
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: $color-primary-500;
+      transition: 0.17s;
+    }
+  }
 }

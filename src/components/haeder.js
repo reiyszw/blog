@@ -1,14 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
 import Nav from "./nav"
+import MyImage from "./../assets/reiyoshizawa.jpg"
 
 const Header = ({ title }) => {
   return (
     <header className="header">
       <div className="header__inner">
-        <h1 className="blog-title">
-          <Link to={`/`}>{title}</Link>
-        </h1>
+        <Link to={`/`} className="header__link">
+          <img className="header__avatar" src={MyImage} alt="" />
+          <div className="header__me">{title}</div>
+        </Link>
         <Nav />
       </div>
     </header>
