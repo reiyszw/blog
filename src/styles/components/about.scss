@@ -1,6 +1,36 @@
+@import "./../base/colors.scss";
+
 .me {
   display: grid;
-  grid-template-columns: auto 200px;
-  align-items: center;
+  grid-template-columns: 1fr;
   grid-column-gap: 32px;
+
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: auto 100px;
+    align-items: end;
+  }
+
+  &__infos {
+    order: 2;
+    margin-top: 24px;
+
+    @media (min-width: 600px) {
+      order: 1;
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+    border: 3px solid $color-primary-200;
+    padding: 3px;
+    width: 30%;
+    order: 1;
+    margin: 0 auto;
+
+    @media (min-width: 600px) {
+      width: 100%;
+    }
+  }
 }
