@@ -3,11 +3,6 @@ import React from "react"
 const MyAccounts = () => {
   const accounts = [
     {
-      title: "Email",
-      name: "reiyoshizawa0418@gmail.com",
-      href: "mailto:reiyoshizawa0418@gmail.com",
-    },
-    {
       title: "GitHub",
       name: "cevicher0",
       href: "https://github.com/cevicher0",
@@ -15,12 +10,17 @@ const MyAccounts = () => {
     {
       title: "Twitter",
       name: "cevicher0",
-      href: "https://twitter.com/taniarascia",
+      href: "https://twitter.com/cevicher0",
     },
     {
       title: "Instagram",
       name: "cevicher0",
       href: "https://www.instagram.com/cevicher0/",
+    },
+    {
+      title: "LinkedIn",
+      name: "Rei Yoshizawa",
+      href: "https://www.linkedin.com/in/reiyoshizawa/",
     },
   ]
   return (

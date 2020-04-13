@@ -1,8 +1,8 @@
 import React from "react"
 const items = [
   {
-    title: "PC",
-    name: "15 MacBook Air",
+    title: "laptop",
+    name: " | 15 MacBook Air",
     href: "https://www.apple.com/macbook-air/",
   },
   {
@@ -40,12 +40,12 @@ const items = [
 const UseAtWork = () => {
   return (
     <div>
-      <h3>Use at Work</h3>
+      <h2>Use at Work</h2>
       <ul>
         {items.map((item, index) => {
           return (
             <li key={index}>
-              {item.title} <a href={item.href}>{item.name}</a>
+              {item.title} : <a href={item.href}>{item.name}</a>
             </li>
           )
         })}

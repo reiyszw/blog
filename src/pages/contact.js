@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MyAccounts from "../components/my-accounts"
-import "../styles/main.scss"
+import "../styles/index.scss"
 
 const Contact = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -11,17 +11,21 @@ const Contact = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <h2>Contact</h2>
-      <p>
-        If you have any comments, question, common interest, etc, don't hesitate
-        to contact me{" "}
-        <a href="mailto:reiyoshizawa0418@gmail.com">
-          eiyoshizawa0418@gmail.com
-        </a>
-        !
-      </p>
-      <h3>My Social Media Accounts</h3>
-      <MyAccounts />
+      <div className="contact">
+        <h1>Contact</h1>
+        <p className="contact__paragraph">
+          If you have any comments, question, common interest, etc, don't
+          hesitate to contact me{" "}
+          <a href="mailto:reiyoshizawa0418@gmail.com">
+            reiyoshizawa0418@gmail.com
+          </a>
+          !
+        </p>
+        <p className="contact__paragraph">
+          You can also contact me through those accounts.
+        </p>
+        <MyAccounts />
+      </div>
     </Layout>
   )
 }

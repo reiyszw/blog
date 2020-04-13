@@ -4,6 +4,12 @@
 @import "components/layout.scss";
 @import "components/header.scss";
 @import "components/nav.scss";
+@import "components/main.scss";
+@import "components/footer.scss";
+@import "components/about.scss";
+@import "components/posts.scss";
+@import "components/post.scss";
+@import "components/contact.scss";
 
 html {
   font-size: 62.5%;
@@ -38,18 +44,29 @@ h6 {
   font-weight: 600;
 }
 
-h3 {
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+h2 {
   font-size: 2.4rem;
+  margin: 48px 0 8px;
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: disc;
+  line-height: 32px;
 }
 
 a {
-  color: $color-primary-500;
+  color: $color-info-700;
   box-shadow: none;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 img {
