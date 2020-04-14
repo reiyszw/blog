@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Rei Yoshi`,
+    title: `Rei Yoshizawa`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Rei Yoshizawa`,
+      summary: `who is frontend developer living and working in Vancouver,Canada`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Rei Yoshizawa Blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `cevicher0`,
     },
   },
   plugins: [
@@ -60,8 +60,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Rei Yoshizawa Blog`,
+        short_name: `Rei's Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

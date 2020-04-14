@@ -8,33 +8,30 @@
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
+
+    .fa-github {
+      color: $color-github;
+    }
+
+    .fa-twitter {
+      color: $color-twitter;
+    }
+
+    .fa-instagram {
+      color: $color-instagram;
+    }
+
+    .fa-linkedin {
+      color: $color-linkedin;
+    }
   }
 
   &__icon {
     margin-right: 8px;
+    font-size: 2rem !important;
   }
 
   &__link {
     margin-left: 4px;
-  }
-
-  .fa {
-    font-size: 20px;
-
-    &-github {
-      color: $color-github;
-    }
-
-    &-twitter {
-      color: $color-twitter;
-    }
-
-    &-instagram {
-      color: $color-instagram;
-    }
-
-    &-linkedin {
-      color: $color-linkedin;
-    }
   }
 }
