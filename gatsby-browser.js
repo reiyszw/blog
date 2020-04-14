@@ -2,4 +2,5 @@
 import "typeface-montserrat"
 import "typeface-merriweather"
 
-import "prismjs/themes/prism.css"
+// use when you use shell or bash
+import "prismjs/plugins/command-line/prism-command-line.css"

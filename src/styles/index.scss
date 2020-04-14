@@ -11,6 +11,8 @@
 @import "components/post.scss";
 @import "components/contact.scss";
 @import "components/accounts.scss";
+@import "plugins/prism.scss";
+@import "plugins/prism-atom-dark.scss";
 
 html {
   font-size: 62.5%;
@@ -21,7 +23,7 @@ body {
   font-size: 1.6em;
   line-height: 1.6;
   color: $color-primary-500;
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -65,7 +67,7 @@ a {
   color: $color-info-600;
   box-shadow: none;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 
   &:hover {
     text-decoration: underline;
