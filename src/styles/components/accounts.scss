@@ -1,0 +1,40 @@
+@import "./../base/colors.scss";
+
+.accounts {
+  list-style-type: none;
+  padding-left: 0;
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__link {
+    margin-left: 4px;
+  }
+
+  .fa {
+    font-size: 20px;
+
+    &-github {
+      color: $color-github;
+    }
+
+    &-twitter {
+      color: $color-twitter;
+    }
+
+    &-instagram {
+      color: $color-instagram;
+    }
+
+    &-linkedin {
+      color: $color-linkedin;
+    }
+  }
+}
