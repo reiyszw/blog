@@ -23,11 +23,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__inner">
-        <div className="footer__copyright">
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="http://reiyoshizawa.com/">Rei Yoshizawa</a>
-        </div>
         <ul className="social-media-logos">
           {socialMediaLogos.map(logo => {
             const icon = `fa fa-${logo.icon} social-media-logos__icon`
@@ -40,6 +35,11 @@ const Footer = () => {
             )
           })}
         </ul>
+        <div className="footer__copyright">
+          © {new Date().getFullYear()}, Built by
+          {` `}
+          <a href="http://reiyoshizawa.com/">Rei Yoshizawa</a>
+        </div>
       </div>
     </footer>
   )

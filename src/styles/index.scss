@@ -14,6 +14,8 @@
 @import "components/social-media-logos.scss";
 @import "plugins/prism.scss";
 @import "plugins/prism-atom-dark.scss";
+@import "mode/dark.scss";
+@import "components/toggler.scss";
 
 html {
   font-size: 62.5%;
@@ -25,6 +27,16 @@ body {
   line-height: 1.6;
   color: $color-primary-500;
   // -webkit-font-smoothing: antialiased;
+  --anchorLink: #3273dc;
+  --navbarBackground: whitesmoke;
+  --navbarColor: #363636;
+  --bg: #ffffff;
+  --textColor: #222;
+  --inlineCode-bg: #f0da4f33;
+  --inlineCode-text: inherit;
+  --boxShadow1: rgba(0, 0, 0, 0.13);
+  --boxShadow2: rgba(0, 0, 0, 0.19);
+  background-color: var(--bg);
 }
 
 h1,

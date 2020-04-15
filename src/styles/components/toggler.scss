@@ -1,0 +1,18 @@
+.toggler-mode {
+  background: none;
+  border: none;
+  outline: none;
+
+  i {
+    transition: color 0.2s ease-out, background 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  .fa-moon-o {
+    color: #feef5f;
+  }
+
+  .fa-sun-o {
+    color: #ffa400;
+  }
+}

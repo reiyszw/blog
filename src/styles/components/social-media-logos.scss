@@ -2,10 +2,11 @@
 
 .social-media-logos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 32px);
   align-items: center;
   grid-column-gap: 16px;
   list-style-type: none;
+  padding: 0;
 
   &__link {
     color: $color-primary-400;

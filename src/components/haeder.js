@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Nav from "./nav"
+import ThemeTogglerPlugin from "./../plugins/toggler"
 import MyImage from "./../assets/reiyoshizawa.jpg"
 
 const Header = ({ title }) => {
@@ -12,6 +13,7 @@ const Header = ({ title }) => {
           <div className="header__me">{title}</div>
         </Link>
         <Nav />
+        <ThemeTogglerPlugin />
       </div>
     </header>
   )

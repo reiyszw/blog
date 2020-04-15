@@ -1,0 +1,68 @@
+@import "./../base/colors.scss";
+
+body.dark {
+  background: $color-dark;
+  -webkit-font-smoothing: antialiased;
+  --anchorLink: #f0da4f;
+  --navbarBackground: $color-dark;
+  --navbarColor: white;
+  --bg: $color-dark;
+  --textColor: white;
+  --boxShadow1: rgba(249, 251, 82, 0.13);
+  --boxShadow2: rgba(232, 248, 85, 0.19);
+  transition: color 0.2s ease-out, background 0.2s ease-out;
+
+  blockquote {
+    // background-color: var(--navbarBackground);
+    background: $color-primary-500;
+  }
+
+  h1,
+  h2,
+  h3,
+  li,
+  div,
+  p {
+    color: var(--textColor);
+  }
+}
+
+.dark {
+  .wrapper {
+    transition: color 0.2s ease-out, background 0.2s ease-out;
+  }
+
+  .main,
+  .footer__copyright {
+    a {
+      color: $color-info-400;
+    }
+  }
+
+  .accounts {
+    i {
+      color: $color-primary-400;
+    }
+  }
+
+  .nav {
+    a {
+      color: $color-primary-300;
+    }
+  }
+
+  .posts__link {
+    &:hover {
+      background: $color-primary-500;
+    }
+  }
+
+  .social-media-logos__link {
+    &:hover {
+      i {
+        color: white;
+        transition: color 0.2s ease-out, background 0.2s ease-out;
+      }
+    }
+  }
+}

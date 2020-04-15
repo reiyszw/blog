@@ -1,7 +1,15 @@
+@import "./../base/colors.scss";
+
 .footer {
   font-size: 1.4rem;
   text-align: center;
   margin-top: auto;
+  width: auto;
+
+  @media (min-width: 600px) {
+    width: $content-width;
+    margin: 0 auto;
+  }
 
   &__inner {
     padding: 32px 0;
@@ -9,5 +17,11 @@
     justify-content: space-between;
     align-items: center;
     line-height: 0;
+  }
+
+  &__copyright {
+    a {
+      color: $content-width;
+    }
   }
 }
