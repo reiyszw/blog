@@ -3,6 +3,10 @@
 .posts {
   border-bottom: 1px solid $color-primary-200;
 
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+
   a {
     color: $color-primary-500;
 
@@ -26,9 +30,11 @@
 
   &__date {
     color: $color-primary-400;
+    font-weight: normal;
   }
 
   &__excerpt {
     margin-top: 8px;
+    font-weight: normal;
   }
 }

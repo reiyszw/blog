@@ -30,10 +30,10 @@ const MyAccounts = () => {
   return (
     <div>
       <ul className="accounts">
-        {accounts.map((account, index) => {
+        {accounts.map(account => {
           const icon = `fa fa-${account.icon} accounts__icon`
           return (
-            <li key={index} className="accounts__item">
+            <li key={account.icon} className="accounts__item">
               <i className={icon}></i> {account.title}:
               <a href={account.href} className="accounts__link">
                 {account.name}

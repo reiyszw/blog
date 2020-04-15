@@ -5,6 +5,10 @@
     margin-top: 24px;
   }
 
+  h1 {
+    font-size: 3.8rem;
+  }
+
   h2 {
     font-size: 2.8rem;
     border-bottom: 1px solid $color-primary-300;
@@ -36,5 +40,6 @@
 
   &__date {
     font-size: 1.4rem;
+    color: $color-primary-400;
   }
 }

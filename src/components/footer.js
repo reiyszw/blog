@@ -29,10 +29,10 @@ const Footer = () => {
           <a href="http://reiyoshizawa.com/">Rei Yoshizawa</a>
         </div>
         <ul className="social-media-logos">
-          {socialMediaLogos.map((logo, index) => {
+          {socialMediaLogos.map(logo => {
             const icon = `fa fa-${logo.icon} social-media-logos__icon`
             return (
-              <li key={index} className="social-media-logos__item">
+              <li key={logo.icon} className="social-media-logos__item">
                 <a href={logo.href} className="social-media-logos__link">
                   <i className={icon}></i>
                 </a>
