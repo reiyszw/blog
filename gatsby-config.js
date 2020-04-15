@@ -71,13 +71,13 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `code`,
-        path: `${__dirname}/src/content`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `code`,
+    //     path: `${__dirname}/src/content`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
