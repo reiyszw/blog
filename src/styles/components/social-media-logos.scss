@@ -3,6 +3,7 @@
 .social-media-logos {
   display: grid;
   grid-template-columns: repeat(4, 32px);
+  justify-content: center;
   align-items: center;
   grid-column-gap: 16px;
   list-style-type: none;

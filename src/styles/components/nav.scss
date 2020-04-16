@@ -3,6 +3,7 @@
 .nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  justify-content: flex-end;
   align-items: center;
   grid-column-gap: 30px;
   margin-top: 16px;
