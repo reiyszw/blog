@@ -14,12 +14,14 @@ class ThemeTogglerPlugin extends React.Component {
                 src={DayIcon}
                 alt="day icon"
                 className="toggler-mode__image"
+                title="You can switch to night mode"
               />
             ) : (
               <img
                 src={NightIcon}
                 alt="night icon"
                 className="toggler-mode__image"
+                title="You can switch to day mode"
               />
             )
           return (
