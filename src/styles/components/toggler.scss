@@ -3,6 +3,12 @@
   border: none;
   outline: none;
 
+  &__image {
+    width: 32px;
+    height: auto;
+    cursor: pointer;
+  }
+
   i {
     transition: color 0.2s ease-out, background 0.2s ease-out;
     cursor: pointer;
