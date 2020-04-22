@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/index.scss"
-// import "font-awesome/css/font-awesome.min.css"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
