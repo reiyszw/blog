@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Nav from "./nav"
 import ThemeTogglerPlugin from "./../plugins/toggler"
-import MyImage from "./../assets/reiyoshizawa.jpg"
+import MyImage from "./../assets/me.jpg"
 
 const Header = ({ title }) => {
   return (

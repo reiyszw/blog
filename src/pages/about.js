@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import "../styles/index.scss"
 import Interest from "./../components/about/interest"
 import UseAtWork from "./../components/about/use-at-work"
-import MyImage from "./../assets/reiyoshizawa.jpg"
+import MyImage from "./../assets/about/me.jpg"
 
 const About = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
