@@ -28,7 +28,13 @@ const Footer = () => {
             const icon = `fa fa-${logo.icon} social-media-logos__icon`
             return (
               <li key={logo.icon} className="social-media-logos__item">
-                <a href={logo.href} className="social-media-logos__link">
+                <a
+                  href={logo.href}
+                  className="social-media-logos__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={logo.icon}
+                >
                   <i className={icon}></i>
                 </a>
               </li>
