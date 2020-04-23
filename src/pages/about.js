@@ -18,15 +18,15 @@ const About = ({ data, location }) => {
           <h1>Rei Yoshizawa</h1>
           <p>
             I’m Rei, full time frontend developer. I currently live and work in
-            Vancovuer, Canada{" "}
+            Vancouver, Canada{" "}
             <span role="img" aria-label="canada flag">
               🇨🇦
             </span>
           </p>
           <p>
-            I am willing to write about what I have lerned so far and share some
-            knowledge about mostly programming but I may sometimes post random
-            things too.
+            I am willing to write about what I have learned so far and share
+            some knowledge about mostly programming but I may sometimes post
+            random things too.
           </p>
         </div>
         <img className="me__image" src={MyImage} alt="" />

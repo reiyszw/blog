@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="footer__copyright">
           © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="http://reiyoshizawa.com/">Rei Yoshizawa</a>
+          Rei Yoshizawa
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@ const Interest = () => {
         <li>
           work as full time frontend developer{" "}
           <a
-            href="https://streamlabs.com/"
+            href="https://github.com/twitchalerts"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,16 +19,6 @@ const Interest = () => {
         <li>speak English, Japanese, Spanish</li>
         <li>salsa and bachata dancer</li>
         <li>usually workout 3 times a week</li>
-        <li>
-          manage Japanese website named{" "}
-          <a
-            href="http://cevicherohack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            セビチェロブログ
-          </a>
-        </li>
       </ul>
     </div>
   )
