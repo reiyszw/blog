@@ -11,6 +11,8 @@
 
   &__link {
     color: $color-primary-500;
+    display: flex;
+    justify-content: center;
 
     &:hover {
       .fa-github {
@@ -31,7 +33,7 @@
     }
   }
 
-  &__icon {
-    font-size: 2.2rem !important;
+  .logo-icon {
+    font-size: 22px;
   }
 }

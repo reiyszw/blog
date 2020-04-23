@@ -58,8 +58,13 @@ body.dark {
   }
 
   .social-media-logos__link {
+    color: $color-primary-400;
+
     &:hover {
-      i {
+      .fa-github,
+      .fa-twitter,
+      .fa-instagram,
+      .fa-linkedin {
         color: white;
         transition: color 0.2s ease-out, background 0.2s ease-out;
       }

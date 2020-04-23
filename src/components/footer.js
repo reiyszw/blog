@@ -1,4 +1,5 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const socialMediaLogos = [
   {
@@ -25,7 +26,7 @@ const Footer = () => {
       <div className="footer__inner">
         <ul className="social-media-logos">
           {socialMediaLogos.map(logo => {
-            const icon = `fa fa-${logo.icon} social-media-logos__icon`
+            const icon = ["fab", `${logo.icon}`]
             return (
               <li key={logo.icon} className="social-media-logos__item">
                 <a
@@ -35,7 +36,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   aria-label={logo.icon}
                 >
-                  <i className={icon}></i>
+                  <FontAwesomeIcon icon={icon} className="logo-icon" />
                 </a>
               </li>
             )
