@@ -1,11 +1,6 @@
 import React from "react"
 const items = [
   {
-    title: "laptop",
-    name: " | 15 MacBook Air",
-    href: "https://www.apple.com/macbook-air/",
-  },
-  {
     title: "Text Editor",
     name: "Visual Studio Code",
     href: "https://code.visualstudio.com/",
