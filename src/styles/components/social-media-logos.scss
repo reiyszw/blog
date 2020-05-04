@@ -2,7 +2,7 @@
 
 .social-media-logos {
   display: grid;
-  grid-template-columns: repeat(4, 32px);
+  grid-template-columns: repeat(4, 20px);
   justify-content: center;
   align-items: center;
   grid-column-gap: 16px;
@@ -11,27 +11,10 @@
 
   &__link {
     color: $color-primary-500;
+    font-size: 1.8rem;
 
     &:hover {
-      .fa-github {
-        color: $color-github;
-      }
-
-      .fa-twitter {
-        color: $color-twitter;
-      }
-
-      .fa-instagram {
-        color: $color-instagram;
-      }
-
-      .fa-linkedin {
-        color: $color-linkedin;
-      }
+      color: $color-primary-400;
     }
-  }
-
-  &__icon {
-    font-size: 2.2rem !important;
   }
 }

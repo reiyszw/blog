@@ -24,9 +24,9 @@ const About = ({ data, location }) => {
             </span>
           </p>
           <p>
-            I am willing to write about what I have lerned so far and share some
-            knowledge about mostly programming but I may sometimes post random
-            things too.
+            I am willing to write about what I have learned so far and share
+            some knowledge about mostly programming but I may sometimes post
+            random things too.
           </p>
         </div>
         <img className="me__image" src={MyImage} alt="" />

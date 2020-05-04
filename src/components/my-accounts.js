@@ -1,4 +1,5 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const MyAccounts = () => {
   const accounts = [
@@ -31,10 +32,10 @@ const MyAccounts = () => {
     <div>
       <ul className="accounts">
         {accounts.map(account => {
-          const icon = `fa fa-${account.icon} accounts__icon`
           return (
             <li key={account.icon} className="accounts__item">
-              <i className={icon}></i> {account.title}:
+              <FontAwesomeIcon icon={["fab", account.icon]} />
+              {account.title}:
               <a href={account.href} className="accounts__link">
                 {account.name}
               </a>
