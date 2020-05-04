@@ -3,6 +3,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../styles/index.scss"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+library.add(fab)
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
