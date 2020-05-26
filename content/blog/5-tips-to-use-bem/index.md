@@ -1,6 +1,6 @@
 ---
 title: 5 tips to use BEM css naming convention properly
-date: "2020-05-10"
+date: "2020-05-25"
 description: "BEM is the most concise way of writing CSS nowadays but you might not know about the proper way using that"
 ---
 
