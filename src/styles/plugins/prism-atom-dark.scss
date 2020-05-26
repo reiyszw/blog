@@ -4,6 +4,14 @@
  * @author Joe Gibson (@gibsjose)
  */
 
+.light {
+  .language-text {
+    padding: 5px 10px !important;
+    color: rgba(0, 0, 0, 0.54) !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #c5c8c6;
