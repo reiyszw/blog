@@ -1,5 +1,5 @@
 ---
-title: 5 tips to use BEM css naming convention properly
+title: 5 Tips to Use BEM CSS Naming Convention Properly
 date: "2020-05-25"
 description: "BEM is the most concise way of writing CSS nowadays but you might not know about the proper way using that"
 ---
