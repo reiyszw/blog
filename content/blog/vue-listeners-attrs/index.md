@@ -1,86 +1,75 @@
 ---
-title: "How to Properly Use $refs for DOM manipulation in Vue.js"
-date: "2020-07-06"
-description: "This post explains how $refs and ref are used together to manipulate DOM, and in which situation we should not overuse these"
+title: "Vue $listeners, $attrs are the handy way for passing event and data"
+date: "2020-06-29"
+description: "By using $listeners and $attrs, You can pass event and data pretty easy"
 ---
 
-Vue is one of the most beginner-friendly JavaScript frameworks I have ever used before. I have been using Vue for almost 2 years and I have no stress about creating and updating the Vue component.
+Today, I will explain about **$listeners** and **$attrs** of Vue. These features may probably be underestimated among developers despite the handy features since there is not enough information on the internet.
 
-However, right after I started using Vue I wondered how we could manipulate DOM inside a Vue file. This issue will be resolved by using `$refs` to access DOM. Many developers might get the same issue so that I decided to write today's blog post.
+Try to search `$listeners vue` `$attrs vue`. You won't grasp the whole concept of $listeners and $attrs by reading and watching the information you find. I am the one who has been feeling that way. So I decided to contribute to helping other developers who can't fully understand that.
 
-## What is $refs and ref
+## What is $listeners? How is it used?
 
-So, I refer to it from the official Vue documentation.
-
-### $refs
- 
-[![Image from Gyazo](https://i.gyazo.com/a70464bd944aea94dc29cee38df61580.png)](https://gyazo.com/a70464bd944aea94dc29cee38df61580)
-
-https://vuejs.org/v2/api/#vm-refs
-
-### ref
-
-> `ref` is used to register a reference to an element or a child component. The reference will be registered under the parent component’s `$refs` object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance: https://vuejs.org/v2/api/#ref
+So, the code will be below when the click event is required. Pretty basic code of handling event. This time `clickHanlder` is invoked when the button is clicked. Nothing is complicated.
 
 ```html
-<!-- vm.$refs.p will be the DOM node -->
-<p ref="p">hello</p>
-
-<!-- vm.$refs.child will be the child component instance -->
-<child-component ref="child"></child-component>
+<button v-on:click="clickHanlder"></button>
 ```
 
-## But, I can't understand it by checking the official documentation...
+But how about this situation?
 
-![Wait What Idk GIF by Originals](https://media.giphy.com/media/fstgqv79jrn0KnscKo/giphy.gif)
+```html
+<inherited-child @click="sayHello"></inherited-child>
+```
 
-I have attached the details of both `$refs` and `ref` introduced by the official Vue.js Documentation. However, These are not kind enough for most of the developers who have never experienced using Vue.js.
+In this situation, the click event is not invoked in `inherited-child`. To make it possible, click event here should be passed to `inherited-child`.
 
-That's why hopefully this blog post will be a valuable source to help to understand the core concepts about `$refs`.
+**Adding $listeners will resolve this problem.**
 
-## How to use $refs and ref?
+```html
+<inherited-child v-on="$listeners"></inherited-child>
+```
 
-To clarify the difference between `$refs` and `ref`, `$refs` is the object and all the DOM elements are contained within this object.
+Now, `sayHello` function is successfully invoked when clicked. This is very straightforward. If you are a Vue developer, $listeners can be used more casually.
 
-But, `$refs` itself is useless.  `ref` should always be registered in the HTML code to take effect `$refs`.
+## $listeners and v-bind="$attrs"
 
-For example, to access to the DOM of the element which is set `ref="slider"`, either `this.$refs.slider` or `this.$refs['slider']` can be accessible to DOM. 
+$listeners is used for passing the event to be invoked in a child component. As similar to $listeners, Setting v-bind="$attrs" in a parent component with props can be also used for passing data.
 
-In order to confirm the DOM of the one you are supposed to access, **you can write `console.log(this.$refs.slider)` in mounted().** 
+```html
+<inherited-child id="1" name="rei" v-bind="$attrs" @click="sayHello"></inherited-child>
+```
 
-Then, the result of DOM will be displayed in the console of the dev tool as below.
+Both `id` and `name` props are passed to `inherited-child` from the parent component. And the key point is it is not necessary to receive props in the child component.
 
-[![Image from Gyazo](https://i.gyazo.com/51e50576f13e29066d99b5bd914bdeba.png)](https://gyazo.com/51e50576f13e29066d99b5bd914bdeba)
+```html
+ <div>
+    <h1>Child</h1>
+    <div>
+      $attrs -> {{$attrs.id}}, {{$attrs.name}}
+    </div>
+  </div>
+```
 
-[![Image from Gyazo](https://i.gyazo.com/a63b56bc9002c2029249ff418b9aa3c5.png)](https://gyazo.com/a63b56bc9002c2029249ff418b9aa3c5)
+## What kind of situation $listeners and $attrs would be useful?
 
-## Possible to DOM access using vanilla JavaScript, However...
+I have explained about $listeners and $attrs by using an example of the parent&child components.
 
-Until now, I have explained about `$refs` for DOM access. But actually, you can even manipulate DOM by using vanilla JavaScript like `document.querySelector('test')`.
+However, these can be more useful when you need to **pass the event or data to a deeper hierarchy.**
 
-If you only need to manipulate DOM of the current component, You could use vanilla JavaScript instead of `$refs`.
+For example, In the situation below if we need to pass the event and data from `A component` to `C component`, $listeners and $attrs can be set in `B component`.
 
-The reason why `$refs` can be prepared for Vue is that with `$refs` we can **access the DOM of a parent and child component.** Moreover, even DOM of the plugin will be accessible by `$refs`. With only vanilla JavaScript, It won't be possible. 
+`A component -> B component -> C component`
 
-## 2 things you should be considered before using $refs
+Of course, Setting emit or props in the B component will also make it work exactly the same. However, It bothers you adding them in both B and C components. 
 
-### Don't overuse $refs 
+In addition, That's not readable and also confuse the developers to update in the future. If the project has Vuex installed we could rely on storing data using that but otherwise, you could probably have an opportunity using $listeners and $attrs sometime soon.
 
-Before adding `$refs` into the component code, Please take a deep breath and consider that you do really need `$refs` to achieve the expected behavior. 
+## Conclution
 
-According to the basic concept of Vue.js, we should use Vue's features as much as possible **rather than directly manipulate DOM.** That's how Vue is welcomed for the developers. We were all fatigued direct manipulation of DOM using jQuery.
+Vue has a lot of useful features but not all of the details are introduced carefully. Since utilizing features makes the project more concise, I will keep publishing these things to encourage especially beginners to write code more simple and clean. Thanks.
 
-### Don't forget adding `ref` to the element
+###Reference
+https://jsfiddle.net/nw2r8d63
 
-To be honest, I have had this mistake several times. It looks so amateur mistake but It has happened it anyway. To make `$refs` be applied to the component, **the `ref` must be set to the target element** you want to call out.
-
-Note that `$refs` and `ref` are the pair used for DOM manipulation. 
-
-## Conclusion
-
-I personally don't prefer to use or update the code which `$refs` are included in several parts. However, sometimes It happens for the Vue developers.
-
-In addition, getting familiar with the specific feature of the daily used technology will eventually help to save your time a lot.
-
-So hopefully, this blog post is worth reading and gaining someone's knowledge. Cheers for all the devs, Thanks!
 
