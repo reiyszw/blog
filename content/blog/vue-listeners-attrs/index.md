@@ -1,5 +1,5 @@
 ---
-title: "Vue $listeners, $attrs are The Handy Way for Passing Event and Data"
+title: "Vue $listeners, $attrs are the handy way for passing event and data"
 date: "2020-06-29"
 description: "By using $listeners and $attrs, You can pass event and data pretty easy"
 ---
@@ -69,5 +69,7 @@ In addition, That's not readable and also confuse the developers to update in th
 
 Vue has a lot of useful features but not all of the details are introduced carefully. Since utilizing features makes the project more concise, I will keep publishing these things to encourage especially beginners to write code more simple and clean. Thanks.
 
-### Reference
+###Reference
 https://jsfiddle.net/nw2r8d63
+
+
