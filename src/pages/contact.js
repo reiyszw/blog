@@ -16,10 +16,9 @@ const Contact = ({ data, location }) => {
         <p className="contact__paragraph">
           If you have any comments, question, common interest, etc, don't
           hesitate to contact me{" "}
-          <a href="mailto:reiyoshizawa0418@gmail.com">
-            reiyoshizawa0418@gmail.com
+          <a href="mailto:reiyszw@gmail.com">
+            reiyszw@gmail.com
           </a>
-          !
         </p>
         <p className="contact__paragraph">
           You can also contact me through those accounts.

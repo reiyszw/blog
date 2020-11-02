@@ -6,20 +6,20 @@ const MyAccounts = () => {
     {
       icon: "github",
       title: "GitHub",
-      name: "cevicher0",
-      href: "https://github.com/cevicher0",
+      name: "reiyszw",
+      href: "https://github.com/reiyszw",
     },
     {
       icon: "twitter",
       title: "Twitter",
-      name: "cevicher0",
-      href: "https://twitter.com/cevicher0",
+      name: "reiyszw",
+      href: "https://twitter.com/reiyszw",
     },
     {
       icon: "instagram",
       title: "Instagram",
-      name: "cevicher0",
-      href: "https://www.instagram.com/cevicher0/",
+      name: "reiyszw",
+      href: "https://www.instagram.com/reiyszw/",
     },
     {
       icon: "linkedin",
@@ -36,7 +36,7 @@ const MyAccounts = () => {
             <li key={account.icon} className="accounts__item">
               <FontAwesomeIcon icon={["fab", account.icon]} />
               {account.title}:
-              <a href={account.href} className="accounts__link">
+              <a href={account.href} target="_blank" className="accounts__link">
                 {account.name}
               </a>
             </li>
