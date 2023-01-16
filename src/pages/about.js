@@ -31,7 +31,6 @@ const About = ({ data, location }) => {
         </div>
         <img className="me__image" src={MyImage} alt="" />
       </div>
-      <Interest />
       <UseAtWork />
     </Layout>
   )
