@@ -10,12 +10,6 @@ const MyAccounts = () => {
       href: "https://github.com/reiyszw",
     },
     {
-      icon: "twitter",
-      title: "Twitter",
-      name: "reiyszw",
-      href: "https://twitter.com/reiyszw",
-    },
-    {
       icon: "instagram",
       title: "Instagram",
       name: "reiyszw",
